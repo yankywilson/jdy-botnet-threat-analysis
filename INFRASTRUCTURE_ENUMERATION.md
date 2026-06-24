@@ -159,4 +159,3 @@ fail this test and their false-positive populations.
 
 ---
 
-*AI-assisted analysis; all findings are leads for analyst reproduction. TLP:CLEAR.*
