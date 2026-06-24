@@ -244,4 +244,3 @@ the cluster.
 
 ---
 
-*AI-assisted analysis; all guidance is leads for analyst reproduction. TLP:CLEAR.*
