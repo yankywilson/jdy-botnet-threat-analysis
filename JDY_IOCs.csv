@@ -1,0 +1,32 @@
+indicator,type,role,context,tag
+40ad28b87b5ed395fe8ff303555cc28974682ed6cc5a71ede76c4b17648cb8ed,sha256,sample,JDY implant MIPS64 BE ELF tz.tar.gz,CORROBORATED
+216.173.65.250,ipv4,relay,Evoxt AS149440 live jdyfj cert nginx 1.20.1 3X-UI 10000 h04.zova.cc,CORROBORATED
+194.14.217.88,ipv4,relay,M247 RO AS9009 live nginx 1.14.1,CORROBORATED
+23.27.120.240,ipv4,relay,Evoxt,CORROBORATED
+109.104.154.116,ipv4,relay,BrainStorm NL,CORROBORATED
+140.82.23.123,ipv4,historical-anchor,Vultr rotated to Cloudflare 2023 lineage,CORROBORATED
+149.248.3.38,ipv4,payload-host,Vultr LA Platypus 13339 Acme Co 9960-9964,CORROBORATED
+2b640582bbbffe58c4efb8ab5a0412e95130e70a587fd1e194fbcd4b33d432cf,cert-sha256,cluster-anchor,jdyfj self-signed CN=jdyfj SAN=1.2.3.4 RSA-4096 to 2033-11-11,CORROBORATED
+ab8f51eb48f363f1,cert-serial,cluster-anchor,jdyfj certificate serial,CORROBORATED
+51:d6:bd:be:10:e9:45:a8:c7:cb:79:a7:73:59:93:ef,ssh-hostkey,relay,unique per box independent provisioning,CORROBORATED
+/usr/local/openssl/1.0.2u/mips64/,build-path,host-artifact,nested install prefix clustering selector,NOVEL
+1.8.3.9,version-string,host-artifact,implant version,NOVEL
+19000,tcp-srcport,network-marker,SYN scan engine source port pair with seeded ISN,CORROBORATED
+0x3251d2d,isn-seed,network-marker,SYN ISN seed increments +1 per target discriminator,NOVEL
+19037,icmp-id,network-marker,ICMP echo id 0x4a5d port-80 path,CORROBORATED
+36765,icmp-seq,network-marker,ICMP echo sequence 0x8f9d this sample published variant 35765,NOVEL
+/dispatch_service/v2/probe_task,uri,endpoint,pull tasking,PUBLISHED
+/dispatch_service/v2/probe_status,uri,endpoint,submit results,NOVEL
+/dispatch_service/v2/test,uri,endpoint,liveness stub returns code 200,NOVEL
+/dispatch/v2/dmap/,uri,endpoint,fingerprint DB fetch digest-gated,CORROBORATED
+/data/v2/pscan,uri,endpoint,port scan data submission,CORROBORATED
+/wscan,uri,endpoint,web scan path,CORROBORATED
+13339,tcp-port,payload-host,Platypus pair with Acme Co block,CORROBORATED
+9960-9964,tcp-port-range,payload-host,Acme Co Go-TLS pair with Platypus,CORROBORATED
+bdb718bdf47cbcde,aes-key,tasking-crypto,16 ASCII bytes raw AES-128-CBC,NOVEL
+185.212.44.147,ipv4,excluded,MikroTik L2TP VPN graph adjacency only,EXCLUDED
+47.239.105.221,ipv4,excluded,Finstars fintech agent API,EXCLUDED
+162.159.36.2,ipv4,excluded,Cloudflare co-hosting fan-out,EXCLUDED
+nebodune.com,domain,excluded,Russian C2 of NetSupport RAT co-tenant,EXCLUDED
+2e971ebfcae02acfd9913736426040c6ad211533afb3e0b090e7e20dbecf69b3,sha256,excluded,prueba.txt third-party researcher artifact,EXCLUDED
+987654321,cobaltstrike-watermark,excluded,trivial sequential default riding crimeware,EXCLUDED

@@ -1,0 +1,32 @@
+title: JDY Botnet jdyfj TLS Certificate Observed
+id: c3e5a7b9-2d4f-4a1c-9b3e-6f8d0c2b4e33
+status: experimental
+description: >
+  Detects the jdyfj self-signed TLS certificate that anchors the JDY control cluster. This is
+  the strongest single identity signal and follows the cluster across IP rotation. A match on
+  an outbound session means an internal asset is talking to a JDY relay; a match on a host you
+  operate means you may be hosting a relay.
+references:
+  - https://github.com/yankywilson/jdy-tasking-decryption
+author: JDY Investigation
+date: 2026/06/24
+tags:
+  - attack.command-and-control
+  - attack.t1071.001
+  - attack.g1017
+logsource:
+  category: network_connection
+  product: zeek
+  service: ssl
+detection:
+  selection_serial:
+    certificate.serial: 'AB8F51EB48F363F1'
+  selection_subject:
+    certificate.subject|contains: 'CN=jdyfj'
+  selection_fp:
+    certificate.fingerprint.sha256: '2b640582bbbffe58c4efb8ab5a0412e95130e70a587fd1e194fbcd4b33d432cf'
+  condition: selection_serial or selection_subject or selection_fp
+falsepositives:
+  - Very low. The cert is a non-standard self-signed keypair specific to this cluster. Field
+    names vary by collector (Zeek x509.log, Suricata tls); adjust to your schema.
+level: high

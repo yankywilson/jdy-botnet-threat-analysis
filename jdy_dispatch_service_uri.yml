@@ -1,0 +1,32 @@
+title: JDY Botnet Dispatch Service URI Access
+id: 7c1e9a40-3b2f-4d8a-9e21-0a4d6b8f1c11
+status: experimental
+description: >
+  Detects access to the JDY botnet dispatch-service URIs used to pull encrypted tasking,
+  submit scan results, and fetch the fingerprint database. JDY is a China-nexus
+  reconnaissance capability (Volt Typhoon / KV lineage, MITRE G1017). Pair with a second
+  signal (the jdyfj certificate or the SYN-recon profile) before treating as confirmed.
+references:
+  - https://github.com/yankywilson/jdy-tasking-decryption
+author: JDY Investigation
+date: 2026/06/24
+tags:
+  - attack.command-and-control
+  - attack.t1071.001
+  - attack.t1573.001
+  - attack.g1017
+logsource:
+  category: proxy
+detection:
+  selection_dispatch:
+    cs-uri-stem|contains:
+      - '/dispatch_service/v2/probe_task'
+      - '/dispatch_service/v2/probe_status'
+      - '/dispatch_service/v2/test'
+  selection_dmap:
+    cs-uri-stem|contains: '/dispatch/v2/dmap/'
+  condition: selection_dispatch or selection_dmap
+falsepositives:
+  - Unrelated applications that happen to use a /dispatch/v2 or /v2/test path. Require the
+    full dispatch_service/v2 path and corroborate with the jdyfj certificate or cluster IPs.
+level: high

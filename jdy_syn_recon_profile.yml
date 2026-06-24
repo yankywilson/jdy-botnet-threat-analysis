@@ -1,0 +1,31 @@
+title: JDY Botnet SYN Reconnaissance Profile
+id: d4f6b8c0-3e5a-4b2d-8c4f-7a9e1d3c5f44
+status: experimental
+description: >
+  Detects the JDY scan engine's SYN reconnaissance profile: outbound SYN packets with source
+  port 19000 and no payload. JDY additionally uses a fixed ISN seed (0x3251d2d, incrementing
+  per target) - that ascending-sequence behavior is the true discriminator and is best
+  confirmed in a network IDS (Zeek/Suricata) or packet capture, not log fields alone. Source
+  port 19000 ALONE is commodity (Mirai-class / SSH brute-force scanners); this rule MUST be
+  paired with the seeded-ISN confirmation or the jdyfj certificate before promotion.
+references:
+  - https://github.com/yankywilson/jdy-tasking-decryption
+author: JDY Investigation
+date: 2026/06/24
+tags:
+  - attack.reconnaissance
+  - attack.t1595
+  - attack.t1595.002
+  - attack.g1017
+logsource:
+  category: firewall
+detection:
+  selection_syn:
+    src_port: 19000
+    tcp_flags: 'S'
+  condition: selection_syn
+falsepositives:
+  - HIGH as written. Source port 19000 overlaps Mirai-class and SSH brute-force scanners.
+    Do not alert on this alone - correlate with the ascending ISN run seeded at 0x3251d2d
+    (IDS/pcap) and/or the jdyfj certificate. Treat unpaired matches as informational only.
+level: low
