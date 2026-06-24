@@ -158,4 +158,3 @@ convention uses the flat/hyphen form `openssl-1.0.2u`. See
 
 ---
 
-*AI-assisted analysis; all findings are leads for analyst reproduction. TLP:CLEAR.*
