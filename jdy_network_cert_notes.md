@@ -81,4 +81,3 @@ FOFA     port="13339" && cert="Acme Co"
 
 ---
 
-*AI-assisted analysis; all guidance is leads for analyst reproduction. TLP:CLEAR.*
