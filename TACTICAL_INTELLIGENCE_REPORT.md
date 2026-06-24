@@ -171,4 +171,3 @@ Defensive, low-regret steps for network defenders:
 
 ---
 
-*AI-assisted analysis; all findings are leads for analyst reproduction. TLP:CLEAR.*
