@@ -130,4 +130,3 @@ in its rented relays.
 
 ---
 
-*AI-assisted analysis; assessments are leads for analyst reproduction. TLP:CLEAR.*
