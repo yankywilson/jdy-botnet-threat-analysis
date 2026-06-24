@@ -167,4 +167,3 @@ returns thousands. The false-positive populations are catalogued in
 
 ---
 
-*AI-assisted analysis throughout; all findings are leads for analyst reproduction. TLP:CLEAR.*
