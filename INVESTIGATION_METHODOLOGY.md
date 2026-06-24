@@ -105,4 +105,3 @@ tiered by audience (strategic / operational / tactical) so each reader gets the 
 
 ---
 
-*AI-assisted analysis; all findings are leads for analyst reproduction. TLP:CLEAR.*
