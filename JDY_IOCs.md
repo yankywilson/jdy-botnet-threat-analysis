@@ -110,4 +110,3 @@ JDY would mislabel co-residency noise. Full reasoning in
 
 ---
 
-*AI-assisted analysis; all findings are leads for analyst reproduction. TLP:CLEAR.*
