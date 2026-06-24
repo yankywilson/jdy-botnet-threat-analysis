@@ -75,4 +75,3 @@ being commodity.
 
 ---
 
-*AI-assisted analysis; all findings are leads for analyst reproduction. TLP:CLEAR.*
