@@ -185,4 +185,3 @@ web-stack version is a single-node fact, never a cluster-wide selector.
 
 ---
 
-*AI-assisted analysis; all findings are leads for analyst reproduction. TLP:CLEAR.*
