@@ -165,4 +165,3 @@ observed in this investigation:
 
 ---
 
-*AI-assisted analysis; all findings are leads for analyst reproduction. TLP:CLEAR.*
